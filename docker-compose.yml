@@ -1,0 +1,9 @@
+services:
+  site:
+    build: .
+    image: iliyass/blog:latest
+    ports: 
+      - 1313:1313
+    volumes: 
+      - .:/app
+    command: server -D --bind="0.0.0.0"
